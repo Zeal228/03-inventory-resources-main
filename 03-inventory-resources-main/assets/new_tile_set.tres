@@ -1,0 +1,43 @@
+[gd_resource type="TileSet" format=3 uid="uid://b24cvcb8uy13m"]
+
+[ext_resource type="Texture2D" uid="uid://cnmdrmc6m2sms" path="res://assets/sprite.png" id="1_6buih"]
+[ext_resource type="PackedScene" uid="uid://c5jeslg0jqsrr" path="res://scenes/camp.tscn" id="1_hqaa3"]
+[ext_resource type="PackedScene" uid="uid://vsdpxhupmlq6" path="res://scenes/tree.tscn" id="2_6n06g"]
+[ext_resource type="PackedScene" uid="uid://cnwd1rv6xndax" path="res://scenes/mushrooms.tscn" id="3_btyyc"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_btyyc"]
+scenes/1/scene = ExtResource("1_hqaa3")
+scenes/2/scene = ExtResource("2_6n06g")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hqaa3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqaa3"]
+texture = ExtResource("1_6buih")
+1:1/size_in_atlas = Vector2i(2, 1)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.91607, -2.0051131, 8, -2.0056477, 10.353186, 6.92822, -8.709202, 6.9673615, -8.996275, -0.45449233)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+4:1/0 = 0
+4:2/0 = 0
+3:2/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+0:2/0 = 0
+0:1/0 = 0
+0:0/0 = 0
+1:0/0 = 0
+4:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_6n06g"]
+scenes/1/scene = ExtResource("3_btyyc")
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_hqaa3")
+sources/0 = SubResource("TileSetScenesCollectionSource_btyyc")
+sources/1 = SubResource("TileSetScenesCollectionSource_hqaa3")
+sources/3 = SubResource("TileSetScenesCollectionSource_6n06g")

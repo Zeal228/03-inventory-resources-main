@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://pjimcrqwcqg4"]
+
+[ext_resource type="Texture2D" uid="uid://cfrj7c6lwmtk7" path="res://assets/sprite1.png" id="1_s7ngc"]
+[ext_resource type="FontFile" uid="uid://lsgihh8w4j00" path="res://assets/ComicoroRu_0.ttf" id="2_seo6g"]
+[ext_resource type="Script" uid="uid://gjxev8vr3kek" path="res://script/ui_info.gd" id="3_seo6g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7ngc"]
+atlas = ExtResource("1_s7ngc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k1s6o"]
+texture = SubResource("AtlasTexture_s7ngc")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="Theme" id="Theme_ugrv0"]
+default_font = ExtResource("2_seo6g")
+TextEdit/styles/normal = SubResource("StyleBoxTexture_k1s6o")
+
+[node name="UiInfo" type="Control" unique_id=776220411]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ugrv0")
+script = ExtResource("3_seo6g")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=474099867]
+layout_mode = 0
+offset_right = 229.0
+offset_bottom = 133.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1345694569]
+layout_mode = 2
+color = Color(0, 0.09019608, 0.1254902, 1)
+
+[node name="VBoxContainer" type="MarginContainer" parent="." unique_id=482680259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 3.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1140082867]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=199937241]
+layout_mode = 2
+text = "Введите ник:"
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1161339591]
+layout_mode = 2
+
+[node name="TextEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=1721335435]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=136461829]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Играть!"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_start_button_pressed"]

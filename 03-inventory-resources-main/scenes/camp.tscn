@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c5jeslg0jqsrr"]
+
+[ext_resource type="Texture2D" uid="uid://cnmdrmc6m2sms" path="res://assets/sprite.png" id="1_wk8fr"]
+[ext_resource type="Texture2D" uid="uid://q6lgffp28hvg" path="res://assets/light.png" id="2_nfbfs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfbfs"]
+atlas = ExtResource("1_wk8fr")
+region = Rect2(32, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5nam"]
+atlas = ExtResource("1_wk8fr")
+region = Rect2(48, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsjlq"]
+atlas = ExtResource("1_wk8fr")
+region = Rect2(64, 36, 16, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7g2ff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfbfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5nam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsjlq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Camp" type="Node2D" unique_id=1912819714]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=314463435]
+sprite_frames = SubResource("SpriteFrames_7g2ff")
+autoplay = "default"
+frame_progress = 0.273159
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=875292491]
+texture = ExtResource("2_nfbfs")

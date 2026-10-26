@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c4mvyfwhvdtqr"]
+
+[ext_resource type="Script" uid="uid://dadjhr6x1or4g" path="res://script/item_data.gd" id="1_gt3uy"]
+[ext_resource type="Texture2D" uid="uid://cen2rskrrndih" path="res://assets/images/sprite_2.png" id="1_r76xb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwn83"]
+atlas = ExtResource("1_r76xb")
+region = Rect2(0, 17, 16, 15)
+
+[resource]
+script = ExtResource("1_gt3uy")
+name = "wood"
+icon = SubResource("AtlasTexture_rwn83")
+metadata/_custom_type_script = "uid://dadjhr6x1or4g"

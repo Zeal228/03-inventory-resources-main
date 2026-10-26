@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dioiluvn8qqg4"]
+
+[ext_resource type="Texture2D" uid="uid://cnmdrmc6m2sms" path="res://assets/sprite.png" id="1_ro3t7"]
+[ext_resource type="FontFile" uid="uid://lsgihh8w4j00" path="res://assets/ComicoroRu_0.ttf" id="2_5en4g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g2ff"]
+atlas = ExtResource("1_ro3t7")
+region = Rect2(48, 16, 32, 17)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uhhky"]
+font = ExtResource("2_5en4g")
+
+[node name="Ui" type="CanvasLayer" unique_id=1897811503]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=337396928]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1076423079]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=690735106]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_7g2ff")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1446615950]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_uhhky")

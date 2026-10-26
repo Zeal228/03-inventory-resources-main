@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b0qyeb1pv8i43"]
+
+[ext_resource type="Script" uid="uid://dl1svu2ufows6" path="res://script/inventory.gd" id="1_kh8if"]
+
+[node name="Inventory" type="CanvasLayer" unique_id=2076596637 node_paths=PackedStringArray("grid")]
+script = ExtResource("1_kh8if")
+grid = NodePath("MarginContainer/GridContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1304556601]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=822052667]
+layout_mode = 2
+columns = 4
